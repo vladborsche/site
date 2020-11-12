@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Процессоры и всякое</title>
+    <style media="screen">
+
+      * {
+        font-family: Verdana;
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0
+      }
+
+      .ulul {
+        background: darkorange;
+        list-style-type: none;
+        padding: 0;
+        width: 20%;
+        margin: 0;
+        float: left;
+      }
+
+      .ulli {
+        border: 4px double white;
+        margin: 1px;
+        padding: 2px;
+        margin-left: 0;
+        margin-right: 0;
+        background: gray;
+        border-radius: 4px;
+        cursor: pointer
+      }
+
+      .linkcpu {
+        color: white;
+        display: block;
+        padding: 25px;
+        text-decoration: none;
+        font-size: 25px
+      }
+
+      .linkcpu:hover {
+        background: white;
+        color: black
+      }
+
+      .linkintel {
+        background: powderblue;
+        color: midnightblue
+      }
+
+      .linkamd {
+        background: darkred;
+        color: white
+      }
+
+      .linkapple {
+        background: floralwhite;
+        color: indigo
+      }
+
+      .linkapple:hover {
+        background: indigo;
+        color: floralwhite
+      }
+
+      .articleh1 {
+        background: gray;
+        text-align: center;
+        padding: 16px;
+        margin: 0;
+        font-size: 50px
+      }
+
+      .articlep {
+        padding: 7px;
+        background: burlywood;
+        margin: 0;
+        width: 80%;
+        float: left;
+      }
+
+      .headerul {
+        background: midnightblue;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        border-radius: 6px;
+      }
+
+      .headerli {
+        float: left
+      }
+
+      .headerlia {
+        background: midnightblue;
+        display: block;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        padding: 20px;
+        font-size: 25px
+      }
+
+      .headerlia:hover {
+        background: royalblue
+      }
+
+      .headercatalogue {
+        width: 33.3%;
+        border-right: 1px solid white
+      }
+
+      .headerinfo {
+        width: 33.2%
+      }
+
+      .headercontacts {
+        width: 33.2%;
+        border-left: 1px solid white
+      }
+
+      .dropbtn {
+        background-color: midnightblue;
+        color: white;
+        padding: 20px;
+        font-size: 25px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+      }
+
+      .dropbtn:hover, .dropbtn:focus {
+        background-color: royalblue;
+      }
+
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: royalblue;
+        min-width: 160px;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        width: 33%;
+        border-radius: 5px
+      }
+
+      .dropdown-content a {
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdown a:hover {background-color: }
+
+      .show {display: block;}
+
+      .middlebuttondropdownmenu {
+        border-top: 1px solid white;
+        border-bottom: 1px solid white
+      }
+
+      .buttonhovercolor:hover {
+        background: white;
+        color: midnightblue
+      }
+
+      @media (max-width: 800px) {
+        articlep, ulul {
+          width: 100%;
+          height: auto
+        }
+
+
+    </style>
+  </head>
+  <body>
+    <ul class="headerul">
+      <li class="headerli headercatalogue">
+        <button onclick="myFunction()" class="dropbtn"><b>Каталог-></b></button>
+          <div id="myDropdown" class="dropdown-content">
+            <a class="buttonhovercolor" href="https://ark.intel.com/content/www/ru/ru/ark/products/208078/intel-core-i5-1145gre-processor-8m-cache-up-to-4-10-ghz.html" target="_blank">Intel Core i5 11th Gen</a>
+            <a class="middlebuttondropdownmenu buttonhovercolor" href="https://ark.intel.com/content/www/ru/ru/ark/products/205684/intel-xeon-platinum-8380hl-processor-38-5m-cache-2-90-ghz.html" target="_blank">Intel Xeon Platinum</a>
+            <a class="buttonhovercolor" href="https://www.amd.com/ru/products/apu/amd-ryzen-5-4500u" target="_blank">AMD Ryzen 5 4500U</a>
+          </div>
+
+          <script>
+            function myFunction() {
+              document.getElementById("myDropdown").classList.toggle("show");
+            }
+
+            window.onclick = function(event) {
+              if (!event.target.matches('.dropbtn')) {
+
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                  var openDropdown = dropdowns[i];
+                  if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                  }
+                }
+              }
+            }
+          </script>
+      </li>
+      <li class="headerli headerinfo"><a class="headerlia" href="info.html" target="_blank"><b>Информация</b></a></li>
+      <li class="headerli headercontacts"><a class="headerlia" href="contacts.html" target="_blank"><b>Контакты</b></a></li>
+    </ul>
+    <h1 class="articleh1">ПРОЦЕССОРЫ</h1>
+    <section>
+      <nav>
+        <ul class="ulul">
+          <li class="ulli"><a class="linkcpu linkintel" href="https://www.intel.ru/content/www/ru/ru/products/processors.html" target="_blank">Intel</a></li>
+          <li class="ulli"><a class="linkcpu linkamd" href="https://www.amd.com/ru/technologies-processors" target="_blank">AMD</a></li>
+          <li class="ulli"><a class="linkcpu linkapple" href="https://www.apple.com/mac/m1/" target="_blank">Apple</a></li>
+        </ul>
+      </nav>
+      <article class="">
+        <p class="articlep"><b>Центра́льный проце́ссор (CPU)</b> — электронный блок либо интегральная схема, исполняющая машинные инструкции (код программ), главная часть аппаратного обеспечения компьютера или программируемого логического контроллера. Иногда называют микропроцессором или просто процессором.<br>
+  Изначально термин центральное процессорное устройство описывал специализированный класс логических машин, предназначенных для выполнения сложных компьютерных программ. Вследствие довольно точного соответствия этого назначения функциям существовавших в то время компьютерных процессоров он естественным образом был перенесён на сами компьютеры. Начало применения термина и его аббревиатуры по отношению к компьютерным системам было положено в 1960-е годы. Устройство, архитектура и реализация процессоров с тех пор неоднократно менялись, однако их основные исполняемые функции остались теми же, что и прежде.<br>
+  Главными характеристиками ЦПУ являются: тактовая частота, производительность, энергопотребление, нормы литографического процесса, используемого при производстве (для микропроцессоров), и архитектура.<br>
+  Ранние ЦП создавались в виде уникальных составных частей для уникальных и даже единственных в своём роде компьютерных систем. Позднее от дорогостоящего способа разработки процессоров, предназначенных для выполнения одной единственной или нескольких узкоспециализированных программ, производители компьютеров перешли к серийному изготовлению типовых классов многоцелевых процессорных устройств. Тенденция к стандартизации компьютерных комплектующих зародилась в эпоху бурного развития полупроводниковых элементов, мейнфреймов и мини-компьютеров, а с появлением интегральных схем она стала ещё более популярной. Создание микросхем позволило ещё больше увеличить сложность ЦП с одновременным уменьшением их физических размеров. Стандартизация и миниатюризация процессоров привели к глубокому проникновению основанных на них цифровых устройств в повседневную жизнь человека. Современные процессоры можно найти не только в таких высокотехнологичных устройствах, как компьютеры, но и в автомобилях, калькуляторах, мобильных телефонах и даже в детских игрушках. Чаще всего они представлены микроконтроллерами, где, помимо вычислительного устройства, на кристалле расположены дополнительные компоненты (память программ и данных, интерфейсы, порты ввода-вывода, таймеры и др.). Современные вычислительные возможности микроконтроллера сравнимы с процессорами персональных ЭВМ десятилетней давности, а чаще даже значительно превосходят их показатели.</p>
+      </article>
+    </section>
+
+
+  </body>
+</html>
